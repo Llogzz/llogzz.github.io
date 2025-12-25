@@ -1,255 +1,72 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Исправление ошибки Cursor.ai - Too many free trial accounts</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-            background: #e5e5e7;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            color: #1d1d1f;
-        }
-
-        .container {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(40px) saturate(180%);
-            -webkit-backdrop-filter: blur(40px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            max-width: 700px;
-            width: 100%;
-            padding: 48px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 32px;
-            position: relative;
-        }
-
-        .author {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(0, 0, 0, 0.06);
-            color: #1d1d1f;
-            padding: 8px 18px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            margin-bottom: 16px;
-            letter-spacing: 0.3px;
-            cursor: pointer;
-        }
-        
-        .author:hover {
-            background: rgba(0, 0, 0, 0.1);
-        }
-        
-        .author-label {
-            color: #6e6e73;
-            font-weight: 400;
-        }
-
-        .header h1 {
-            font-size: 32px;
-            font-weight: 600;
-            color: #1d1d1f;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-        }
-
-        .error-box {
-            background: rgba(0, 0, 0, 0.03);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 32px;
-        }
-
-        .error-box p {
-            color: #6e6e73;
-            line-height: 1.6;
-            font-size: 15px;
-        }
-
-        .error-text {
-            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
-            background: rgba(0, 0, 0, 0.06);
-            padding: 12px;
-            border-radius: 8px;
-            margin: 12px 0;
-            font-size: 13px;
-            color: #1d1d1f;
-            font-weight: 500;
-        }
-
-        .solution-title {
-            font-size: 24px;
-            color: #1d1d1f;
-            margin-bottom: 24px;
-            text-align: center;
-            font-weight: 600;
-            letter-spacing: -0.3px;
-        }
-
-        .steps {
-            list-style: none;
-            counter-reset: step-counter;
-        }
-
-        .step {
-            counter-increment: step-counter;
-            margin-bottom: 28px;
-            padding-left: 56px;
-            position: relative;
-            line-height: 1.7;
-            font-size: 16px;
-            color: #1d1d1f;
-        }
-
-        .step::before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 36px;
-            height: 36px;
-            background: #1d1d1f;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 500;
-            font-size: 16px;
-        }
-
-        .download-link {
-            display: inline-block;
-            background: #0071e3;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            text-decoration: none;
-            margin: 8px 0;
-            font-weight: 500;
-            font-size: 15px;
-        }
-
-        .command {
-            background: rgba(0, 0, 0, 0.06);
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
-            color: #1d1d1f;
-            font-weight: 500;
-            display: inline-block;
-            margin: 0 2px;
-            font-size: 15px;
-        }
-
-        .success-box {
-            background: rgba(0, 0, 0, 0.03);
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 32px;
-            text-align: center;
-        }
-
-        .success-box p {
-            color: #1d1d1f;
-            font-weight: 500;
-            font-size: 16px;
-        }
-
-        .icon {
-            width: 18px;
-            height: 18px;
-            opacity: 0.7;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 32px 24px;
-            }
-
-            .header h1 {
-                font-size: 28px;
-            }
-
-            .step {
-                padding-left: 48px;
-                font-size: 15px;
-            }
-
-            .step::before {
-                width: 32px;
-                height: 32px;
-                font-size: 15px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Обновление фикса</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 40px 32px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    .status {
+      margin: 24px 0;
+      padding: 12px 16px;
+      border-radius: 8px;
+      background: rgba(255, 80, 80, 0.15);
+      color: #ffb3b3;
+      font-weight: 500;
+    }
+    .footer {
+      margin-top: 32px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <a href="https://funpay.com/users/11531506/" target="_blank" class="author">
-                <span class="author-label">by</span> Llogzz
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.5;">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-            </a>
-            <h1>Исправление ошибки Cursor.ai</h1>
-        </div>
+  <div class="card">
+    <h1>Обновление фикса</h1>
 
-        <div class="error-box">
-            <div class="error-text">"Too many free trial accounts are in use on this machine"</div>
-            <p>Это означает, что ваш ПК был обнаружен как использующий слишком много пробных аккаунтов Cursor.</p>
-        </div>
-
-        <h2 class="solution-title">Решение проблемы</h2>
-
-        <p style="margin-bottom: 24px; line-height: 1.7; color: #6e6e73;">Чтобы решить эту проблему, сначала войдите в свой аккаунт Cursor в приложении Cursor.</p>
-
-        <ol class="steps">
-            <li class="step">
-                Скачайте и запустите это приложение:<br>
-                <a href="https://tinyurl.com/cursorfreevip" class="download-link" target="_blank">tinyurl.com/cursorfreevip</a>
-            </li>
-
-            <li class="step">
-                После запуска выберите опцию "Сбросить Machine ID", введя <span class="command">1</span> и нажав <strong>Enter</strong>.
-            </li>
-
-            <li class="step">
-                Перезапустите приложение Cursor.
-            </li>
-
-            <li class="step">
-                <strong>Готово!</strong> Ошибка должна быть исправлена.
-            </li>
-        </ol>
-
-        <div class="success-box">
-            <p>✓ После выполнения этих шагов вы сможете снова использовать Cursor</p>
-        </div>
+    <div class="status">
+      Старый фикс ошибки<br />
+      <strong>"Too many free trial accounts are in use on this machine"</strong><br />
+      больше не работает.
     </div>
+
+    <p>
+      В данный момент я занимаюсь разработкой нового решения.
+      Пожалуйста, подождите — обновление будет опубликовано в ближайшее время.
+    </p>
+
+    <div class="footer">
+      Спасибо за понимание 🙏
+    </div>
+  </div>
 </body>
 </html>
