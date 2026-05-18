@@ -290,50 +290,26 @@
             color: #a8a8a8;
         }
 
-        .support-section {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
+        /* Новый зеленый блок для продавцов */
+        .vendor-notice {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(52, 199, 89, 0.12);
+            border-left: 4px solid #34c759;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
         }
 
-        .support-section h3 {
-            color: #f5f5f7;
-            margin-bottom: 15px;
-            font-size: 1.4em;
-        }
-
-        .support-section p {
-            margin-bottom: 15px;
-            color: #86868b;
-        }
-
-        .support-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #3c3c3e 0%, #2c2c2e 100%);
-            color: white;
-            padding: 14px 35px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 10px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            cursor: pointer;
-        }
-
-        .support-link:hover {
-            background: linear-gradient(135deg, #4c4c4e 0%, #3c3c3e 100%);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-            letter-spacing: 0.5px;
-        }
-
-        .support-hint {
+        .vendor-notice strong {
+            color: #34c759;
             display: block;
-            font-size: 0.85em;
-            color: #86868b;
-            margin-top: 8px;
-            font-style: italic;
+            margin-bottom: 6px;
+            font-size: 1.1em;
+        }
+
+        .vendor-notice p {
+            margin: 0;
+            color: #e5e5e7;
         }
     </style>
 </head>
@@ -374,7 +350,6 @@
             </button>
         </div>
 
-        <!-- Windows Tab -->
         <div id="windows" class="os-section active">
             <div class="steps">
                 <div class="step">
@@ -414,7 +389,6 @@
             </div>
         </div>
 
-        <!-- macOS Tab -->
         <div id="macos" class="os-section">
             <div class="steps">
                 <div class="step">
@@ -450,7 +424,6 @@
             </div>
         </div>
 
-        <!-- Linux Tab -->
         <div id="linux" class="os-section">
             <div class="steps">
                 <div class="step">
@@ -491,7 +464,7 @@
             <p>Программа изменяет файл конфигурации Cursor <code>storage.json</code>, расположенный по следующим путям:</p>
             <ul>
                 <li><strong>Windows:</strong> <code>%APPDATA%\Cursor\User\globalStorage\storage.json</code></li>
-                <li><strong>macOS:</strong> <code>~/Library/Application Support/Cursor/User/globalStorage/storage.json</code></li>
+                <li><strong>macOS:</strong> <code>~/Library/Application Support/Cursor/User/globalStorage\storage.json</code></li>
                 <li><strong>Linux:</strong> <code>~/.config/Cursor/User/globalStorage/storage.json</code></li>
             </ul>
             <p>Инструмент генерирует новые уникальные идентификаторы для полей:</p>
@@ -503,13 +476,9 @@
             </ul>
         </div>
 
-        <div class="support-section">
-            <h3>Поддержать автора</h3>
-            <p>Если этот инструмент помог вам, вы можете поддержать автора</p>
-            <a href="https://funpay.com/users/11531506/" target="_blank" class="support-link">
-                FunPay - Llogzz
-            </a>
-            <span class="support-hint">↑<br>Нажмите, чтобы перейти</span>
+        <div class="vendor-notice">
+            <strong>💚 ДЛЯ ПРОДАВЦОВ</strong>
+            <p>Являетесь продавцом?? Мы разрешаем использовать и распространять данную инструкцию полностью бесплатно!</p>
         </div>
     </div>
 
